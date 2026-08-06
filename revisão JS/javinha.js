@@ -59,4 +59,37 @@ function iniciarCadastro() {
 
 }
 
+//aulahover
+const botao = document.getElementById("meuBotao");
 
+botao.addEventListener("mouseenter",function(){
+    botao.style.backgroundColor = "red";
+    botao.style.color = "black";
+
+});
+botao.addEventListener("mouseleave",function(){
+    botao.style.backgroundColor = "";
+    botao.style.color = "";
+
+});
+
+//carrossel
+const imagens = [
+    "https://www.melhoresdestinos.com.br/wp-content/uploads/2020/06/praias-brasil-sancho.jpg",
+    "https://www.cvc.com.br/dicas-de-viagem/wp-content/uploads/2022/12/destinos-de-praia-brasil-barra-grande-pi.jpg",
+    "https://cdn.sanity.io/images/nxpteyfv/goguides/3f743c5f97c7d4802855863563adfd6a28a0d57f-1600x1066.jpg",
+];
+
+const imgElemento = document.getElementById("imagemCarrossel");
+let indiceAtual = 0;
+
+function mudarFoto() {
+    indiceAtual = indiceAtual + 1;
+    if (indiceAtual >= imagens.length){
+        indiceAtual = 0;
+    }
+
+    imgElemento.src = imagens[indiceAtual];
+}
+
+setInterval(mudarFoto,3000);
