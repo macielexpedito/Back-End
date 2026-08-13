@@ -257,11 +257,6 @@ main {
     cursor:pointer;
 }
 
-.agendamento button:hover{
-    background:#e61c68;
-}
-
-
 
 footer {
     display: grid;
