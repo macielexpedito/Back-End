@@ -1,3 +1,4 @@
+@import url('https://googleapis.com');
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +26,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
 }
+.logo h1{
+    color: #e91e63;
+    font-family: 'Pacifico', cursive;   
+    font-size: 32px;  
+}
 .nav {
     display: flex;
     justify-content: center;
@@ -50,7 +56,7 @@ main {
     flex-direction: row;
     justify-content:space-between;
     background:#ffd8e7;
-    width: 100%;
+    width: 100dvw;
     height: 397px;
     padding: 40px 20px;
 }
@@ -190,6 +196,69 @@ main {
     background:#ff2b7a;
     color:white;
     border-radius:8px;
+}
+
+.agendamento{
+    width:70%;
+    margin:40px auto;
+    padding:30px;
+    background:#ffe4ef;
+    border-radius:10px;
+}
+
+.agendamento h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.agendamento form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.agendamento input {
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    outline:none;
+
+}
+.agendamento select {
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    outline:none;
+
+}
+.agendamento textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    outline:none;
+}
+
+.agendamento textarea{
+    resize:none;
+}
+
+.agendamento button{
+    width:220px;
+    align-self:center;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#ff2b7a;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.agendamento button:hover{
+    background:#e61c68;
 }
 
 

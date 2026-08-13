@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salão Jane</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -14,11 +16,11 @@
             <p>Salão de Beleza</p>
         </div>
         <div class="nav">
-            <a href="#">Home</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#galeria">Galeria</a>
-            <a href="#promocoes">Promoções</a>
-            <a href="#contato">Contato</a>
+            <a href="#" class="link-colorido">Home</a>
+            <a href="#servicos" class="link-colorido">Serviços</a>
+            <a href="#galeria" class="link-colorido">Galeria</a>
+            <a href="#promocoes" class="link-colorido">Promoções</a>
+            <a href="#contato" class="link-colorido">Contato</a>
            
         </div>
         </div>
@@ -30,10 +32,10 @@
                 <h2>cabelo</h2> 
                 <h3>Merece o melhor cuidado!</h3>
                 <p>Transformando Beleza em autoestima</p>
-                <button>Agendar agora</button>
+                <button onclick="rolarPara('agendar')">Agendar agora</button>
             </div>
             <div class="imagem-container">
-                <img src="img/modelo-banner.png" alt="Cabelo" width="400" height="400">
+                <img  id="imagem-modelo" src="img/modelo-banner.png" alt="Cabelo" width="400" height="400">
             </div>
         </section>
 
@@ -81,7 +83,7 @@
         </section>
         <section class="produtos">
             <h2>Nossos Produtos</h2>
-            <img src="img/shampoo_reconstrucao_card.png" width="200" height="300">
+            <img id="produto" src="img/shampoo_reconstrucao_card.png" width="200" height="300">
         </section>
         <section class="galeria" id="galeria">
             <h2>Nossa Galeria</h2>
@@ -106,24 +108,60 @@
                 <article class="promo">
                     <h3>20% OFF</h3>
                     <p>Corte + Escova</p>
-                    <button>Agendar Agora</button>
+                    <button onclick="rolarPara('agendar')">Agendar Agora</button>
                 </article>
 
                 <article class="promo">
                     <h3>Pacote Noiva</h3>
                     <p>Make + penteado + unha</p>
-                    <button>Agendar Agora</button>
+                    <button onclick="rolarPara('agendar')">Agendar Agora</button>
                 </article>
 
                 <article class="promo">
                     <h3>Coloração + Hidratação</h3>
                     <p>Por apenas R$140,00</p>
-                    <button>Agendar Agora</button>
+                    <button onclick="rolarPara('agendar')">Agendar Agora</button>
                 </article>
 
             </div>
 
         </section>
+        <section id="agendar" class="agendamento">
+
+        <h2>Agende seu Horário</h2>
+
+        <form>
+
+        <input type="text" placeholder="Nome" required>
+
+        <input type="tel" placeholder="Telefone" required>
+
+        <input type="date" required>
+
+        <input type="time" required>
+
+        <select required>
+            <option value="">Selecione um serviço</option>
+            <option>Corte Feminino</option>
+            <option>Coloração</option>
+            <option>Escova</option>
+            <option>Hidratação</option>
+            <option>Manicure</option>
+            <option>Maquiagem</option>
+        </select>
+
+        <textarea
+            placeholder="Observações (opcional)"
+            rows="4">
+        </textarea>
+
+        <button type="submit">
+            Agendar Agora
+        </button>
+
+    </form>
+
+    </section>
 
     </main>
     <footer id="contato">
